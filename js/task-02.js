@@ -9,14 +9,15 @@ const ingredients = [
 const list= document.querySelector(`#ingredients`);
 console.log(list);
 
-const elements = ingredients.forEach((element)=>{
+const elements = ingredients.map((element)=>{
   const listEl = document.createElement(`li`);
-  listEl.classList.add(`item`);
   listEl.textContent = `${element}`;
+  listEl.classList.add(`item`);
   list.appendChild(listEl);
-  console.log(listEl);
 });
 
 
-
-
+// 1.Створить окремий елемент <li>. Обов'язково використовуй метод document.createElement().
+// 2.Додасть назву інгредієнта як його текстовий вміст.
+// 3.Додасть елементу клас item.
+// 4.Після чого, вставить усі <li> за одну операцію у список ul#ingredients
