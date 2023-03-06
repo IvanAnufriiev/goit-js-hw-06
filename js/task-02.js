@@ -9,13 +9,13 @@ const ingredients = [
 const list= document.querySelector(`#ingredients`);
 console.log(list);
 
-const elements = ingredients.map((element)=>{
+const markup = ingredients.map((element)=>{
   const listEl = document.createElement(`li`);
-  listEl.textContent = `${element}`;
   listEl.classList.add(`item`);
-  list.appendChild(listEl);
+  listEl.textContent = `${element}`;
+  return listEl;
 });
-
+list.append(...markup);
 
 // 1.Створить окремий елемент <li>. Обов'язково використовуй метод document.createElement().
 // 2.Додасть назву інгредієнта як його текстовий вміст.

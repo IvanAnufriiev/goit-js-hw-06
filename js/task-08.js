@@ -10,8 +10,8 @@ const inputValue = {
     password: `${password.value}`,
 }
 console.log(inputValue)
-if ('${email.value}' === '' || '${password.value}' === '') {
-    window.alert("Всі поля повинні бути заповнені!");
+if (email.value === "" || password.value === "") {
+    alert("Всі поля повинні бути заповнені!");
     return
 }
 event.target.reset()
